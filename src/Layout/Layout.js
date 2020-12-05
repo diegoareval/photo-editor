@@ -1,4 +1,6 @@
+import { Button } from 'react-bootstrap'
 import React from 'react'
+import "../Home/HomePage.css"
 
 const Layout = ({children, saveImageToDisk}) => {
     return (

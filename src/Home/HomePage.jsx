@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./HomePage.css";
 import "tui-image-editor/dist/tui-image-editor.css";
 import ImageEditor from "@toast-ui/react-image-editor";
+import Layout from "../Layout/Layout";
 const icona = require("tui-image-editor/dist/svg/icon-a.svg");
 const iconb = require("tui-image-editor/dist/svg/icon-b.svg");
 const iconc = require("tui-image-editor/dist/svg/icon-c.svg");
@@ -34,7 +35,7 @@ function HomePage() {
     }
   };
   return (
-    <saveImageToDisk saveImageToDisk={saveImageToDisk}>
+    <Layout saveImageToDisk={saveImageToDisk}>
       <ImageEditor
         includeUI={{
           loadImage: {
@@ -58,7 +59,7 @@ function HomePage() {
         usageStatistics={true}
         ref={imageEditor}
       />
-    </saveImageToDisk>
+    </Layout>
   );
 }
 export default HomePage;
